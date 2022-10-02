@@ -8,11 +8,8 @@ const mongoose=require("mongoose")
 
 app.listen(Port,async()=>{
     try {
-
-        mongoose.set('bufferCommands', false);
-
         await connect();
-
+        mongoose.set('bufferCommands', false);
         console.log("connected to a port")
     } catch (error) {
         console.log({message:error.message})
